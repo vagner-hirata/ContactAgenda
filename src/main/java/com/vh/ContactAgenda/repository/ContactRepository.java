@@ -1,4 +1,7 @@
 package com.vh.ContactAgenda.repository;
 
-public interface ContactRepository {
+import com.vh.ContactAgenda.model.Contact;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ContactRepository extends JpaRepository<Contact, Long> {
 }
