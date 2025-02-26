@@ -1,6 +1,7 @@
 package com.vh.ContactAgenda.model;
 
 import com.vh.ContactAgenda.dto.RegisterContactData;
+import com.vh.ContactAgenda.dto.UpdateContactData;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -29,6 +30,18 @@ public class Contact {
         this.phoneNumber = data.phoneNumber();
         this.email = data.email();
 
+    }
+
+    public void updateData(UpdateContactData contactData) {
+        if(contactData.name() != null) {
+            this.name = contactData.name();
+        }
+        if(contactData.phoneNumber() != null) {
+            this.phoneNumber = contactData.phoneNumber();
+        }
+        if(contactData.email() != null) {
+            this.email = contactData.email();
+        }
     }
 }
 
